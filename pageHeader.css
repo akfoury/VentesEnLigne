@@ -1,0 +1,99 @@
+:root {
+    --light-grey: #c6c6c6;
+    --dark-grey: #393939;
+    --flashy-red: #da1e28;
+    --normal-grey: #8d8d8d;
+    --light-purple: rgba(101, 103, 221, 0.897);
+    --light-green: #42BE65;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: var(--dark-grey);
+    width: 100%;
+    height: 70px;
+}
+
+.c-header > .c-header__input {
+    width: 45%;
+    height: 30px;
+    margin: auto 0;
+    position: relative;
+}
+
+.c-header > .c-header__input > input{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.c-header__item {
+    display: flex;
+    width:90px;
+    height: 100%;
+    height: inherit;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.c-header__logo {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    padding: 8px;
+}
+
+.c-header__item > i {
+    color: white;
+}
+
+.active {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    width: 90%;
+    height: 85%;
+    align-items: flex-start;
+    margin: auto 0;
+    padding: 6px 3px;
+}
+
+.active__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    width: 30%;
+}
+
+
+.active__col div {
+    background: white;
+    width: 22px; 
+    height: 22px;
+    border-radius: 50%;
+    display: flex; /* or inline-flex */
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    color: var(--dark-grey);
+    font-weight: 700;
+}
+
+.active > span {
+    width: 70%;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 0.90rem;
+}

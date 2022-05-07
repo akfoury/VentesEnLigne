@@ -1,0 +1,355 @@
+:root {
+  --light-grey: #c6c6c6;
+  --dark-grey: #393939;
+  --flashy-red: #da1e28;
+  --normal-grey: #8d8d8d;
+  --light-purple: rgba(101, 103, 221, 0.897);
+  --light-green: #42BE65;
+}
+
+html body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: blue;
+  box-sizing: border-box;
+}
+
+/* CSS states */
+.--hidden {
+  display: none;
+}
+
+.--disabled {
+  color: #666666;
+}
+
+.--valid-input {
+  border: 2px solid white;
+  outline: none;
+}
+
+.--invalid-input {
+  border: 2px solid #ff8389;
+  outline: none;
+}
+
+
+/* CSS layout */
+.l-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  min-height: 100%;
+  width: 100%;
+  margin-top: 48px;
+}
+
+.l-main__item {
+  flex: 1 1 50%;
+  padding: 16px 50px;
+}
+
+/* .l-main__subitem {
+  width: 100%;
+  height: 100%;
+} */
+
+.l-main__subitem--vertical-layout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+
+/* CSS accordion component */
+.c-accordion {
+  width: 100%;
+}
+.c-accordion__item {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #262626;
+  border-left: 3px solid #666666;
+}
+
+.c-accordion__item--active-leftborder {
+  border-left: 3px solid var(--light-purple);
+}
+
+.c-accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.c-accordion__summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 0.90rem;
+  color: white;
+  padding: 16px 32px;
+  width: 100%;
+  height: 60px;
+}
+
+.c-accordion__summary--hidden {
+  display: none;
+}
+
+.c-accordion-item__summary > div:first-child {
+  padding-bottom: 10px;
+}
+
+.c-accordion__submit {
+  padding: 16px 32px;
+  position: relative;
+}
+
+.c-accordion__submit--hidden {
+  display: none;
+}
+
+.c-accordion__row {
+  display: flex;
+}
+
+.c-accordion__circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 90%;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-right: 16px;
+}
+
+.c-accordion__circle--active-circle {
+  background-color: var(--light-purple);
+  border: none;
+}
+
+.c-accordion__content {
+  padding: 16px 32px;
+  display: block;
+}
+
+.c-accordion__content--hidden {
+  display: none;
+}
+
+
+.c-accordion__row > h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.c-accordion__row > p {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* CSS field component */
+.c-field {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.c-field--disabled .c-field__input {
+  background-color: var(--dark-grey);
+  border: none;
+  border-bottom: 2px solid black;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c-field--disabled .c-field__label {
+  color: var(--light-grey);
+}
+
+.c-field__label {
+  color: white;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.c-field__outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c-field__wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c-field__input {
+  min-width: fit-content;
+  width: 100%;
+  height: 2rem;
+  padding-left: 20px;
+  background-color: #333232;
+  color: white;
+  border: none;
+  border-bottom: 1px solid var(--normal-grey);
+}
+
+.c-field__outer-wrapper[data-invalid=true] .c-field__input:not(:focus) {
+  border: 2px solid var(--flashy-red);
+}
+
+.c-field__input:focus {
+  border: 2px solid white;
+  outline: none;
+}
+
+.c-field__requirements {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color:#ff8389;
+  font-weight: 400;
+  width: 100%;
+  display: none;
+}
+
+.c-field__outer-wrapper[data-invalid=true] .c-field__requirements {
+  display: block;
+}
+
+
+/* CSS password-helper component */
+.c-password-helper__outer-wrapper {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  top: 80px;
+  right: 5px;
+  background-color: white;
+  display: none;
+}
+
+.c-password-helper__wrapper {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.c-password-helper__wrapper:before,
+.c-password-helper__wrapper:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: calc(50% - 12px);
+  border: 11px solid transparent;
+  border-bottom-color: white;
+}
+
+.c-password-helper__item {
+  width: 100%;
+  display: flex;
+  align-items: space-between;
+}
+
+.c-password-helper__item > i:not(.validate) {
+  flex: 20% 1 1;
+  color: var(--light-grey);
+}
+
+.c-password-helper__item > div{
+  flex: 80% 1 1;
+}
+
+.validate {
+  flex: 20% 1 1;
+  color: var(--light-green);
+}
+
+.c-password-helper__info {
+  color: black;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* CSS c-btn component */
+.c-btn {
+  background-color: var(--light-purple);
+  color: white;
+  border: none;
+  padding-right: 2.5em;
+  cursor: pointer;
+}
+
+.c-btn--big {
+  width: 100px;
+  height: 32px;
+}
+
+.c-btn--small {
+  width: 100px;
+  height:100px;
+}
+.c-btn--input {
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  top: 0;
+  right: 0;
+}
+
+.c-btn--flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.c-btn--transparent {
+  background-color: transparent;
+  color: var(--light-purple);
+}
+
+.c-btn--hidden {
+  display: none;
+}
+
+
+/* CSS c-line component */
+.c-line-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 5px;
+}
+
+.c-line-progress__node {
+  width: calc((100% / 4) - 5px);
+  background-color: #E0E0E0;
+}
+
+.c-line-progress__node--valid-node {
+  background-color: var(--light-green);
+}
+
+.accordion-item__subtitle {
+  padding-bottom: 20px;
+}
