@@ -1,0 +1,40 @@
+.c-accordion {
+    width: 40%;
+    min-width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-accordion__circle {
+    border: 1px solid var(--light-blue);
+    background-color: var(--light-blue);
+}
+
+a {
+    font-size: 0.70rem;
+    display: inline-block;
+}
+
+.fa-sign-in {
+    position: absolute;
+    top: 50%;
+    left: 140px;
+}
+
+.c-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+}
+.c-logo > a {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+}
+
+.c-logo > a > img {
+    filter:  brightness(0) invert(1);
+}

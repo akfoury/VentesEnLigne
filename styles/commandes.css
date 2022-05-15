@@ -1,0 +1,37 @@
+.c-accordion {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.c-accordion__col span {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.product-card__image {
+    max-width: 140px;
+    max-height: 234px;
+    height: 234px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.product-card__image > img {
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+
+.product-card__title:nth-child(1) {
+    margin-top: 48px;
+    margin-left: 24px;
+}
+.product-card__title:not(.product-card__title:nth-child(1)) {
+    margin-left: 24px;
+    margin-top: 16px;
+}
+
+.c-accordion__row {
+    justify-content: flex-start;
+}

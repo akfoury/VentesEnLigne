@@ -1,0 +1,4 @@
+export const stripeConfig = {
+    secretKey: 'sk_test_51Kx59vB6hoQ7isu8B9E49vVyg0T1a1peBI618AGITFjTYV99IXwN6OsHglxnK0SRe9L8vNkSuhOcj0C37xZUOAoJ00FJhCovg8',
+    publishableKey: 'pk_test_51Kx59vB6hoQ7isu8tnYVazE69U5Qatl51Xj5bYQvP1unZsQ0uVGSuJ6Iboz7IigyyQ25hbgLNyVKqu4qJp6w0iIO00j07k7AUE'
+}

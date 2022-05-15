@@ -1,16 +1,9 @@
-:root {
-  --light-grey: #c6c6c6;
-  --dark-grey: #393939;
-  --flashy-red: #da1e28;
-  --normal-grey: #8d8d8d;
-  --light-purple: rgba(101, 103, 221, 0.897);
-  --light-green: #42BE65;
-}
+@import "./theme-variables.css";
 
 html body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  background-color: blue;
+  background-color: #3c3232;
   box-sizing: border-box;
 }
 
@@ -51,10 +44,10 @@ html body {
   padding: 16px 50px;
 }
 
-/* .l-main__subitem {
+.l-main__subitem {
   width: 100%;
   height: 100%;
-} */
+}
 
 .l-main__subitem--vertical-layout {
   display: flex;
@@ -78,7 +71,7 @@ html body {
 }
 
 .c-accordion__item--active-leftborder {
-  border-left: 3px solid var(--light-purple);
+  border-left: 3px solid var(--light-blue);
 }
 
 .c-accordion__header {
@@ -124,6 +117,11 @@ html body {
   display: flex;
 }
 
+.c-accordion__col {
+  display: flex;
+  flex-direction: column;
+}
+
 .c-accordion__circle {
   width: 12px;
   height: 12px;
@@ -131,10 +129,18 @@ html body {
   background-color: transparent;
   border: 1px solid white;
   margin-right: 16px;
+  display: flex; /* or inline-flex */
+  align-items: center; 
+  justify-content: center;
+}
+
+.c-accordion__circle--valid {
+  color: var(--light-blue);
+  border: 1px solid var(--light-blue);
 }
 
 .c-accordion__circle--active-circle {
-  background-color: var(--light-purple);
+  background-color: var(--light-blue);
   border: none;
 }
 
@@ -292,16 +298,33 @@ html body {
 
 /* CSS c-btn component */
 .c-btn {
-  background-color: var(--light-purple);
+  background-color: var(--light-blue);
   color: white;
   border: none;
   padding-right: 2.5em;
   cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .c-btn--big {
   width: 100px;
   height: 32px;
+}
+
+.c-btn--medium {
+  width: 120px;
+  height: 35px;
+}
+
+.c-btn--extra-big {
+  width: 140px;
+  height: 42px;
+}
+
+.c-btn--bold {
+  font-weight: 700;
 }
 
 .c-btn--small {
@@ -316,6 +339,10 @@ html body {
   right: 0;
 }
 
+.c-btn--rounded {
+  border-radius: 6px;
+}
+
 .c-btn--flex {
   display: flex;
   justify-content: space-around;
@@ -324,11 +351,15 @@ html body {
 
 .c-btn--transparent {
   background-color: transparent;
-  color: var(--light-purple);
+  color: var(--light-blue);
 }
 
 .c-btn--hidden {
   display: none;
+}
+
+.c-btn--center {
+  padding: 0px;
 }
 
 
@@ -352,4 +383,20 @@ html body {
 
 .accordion-item__subtitle {
   padding-bottom: 20px;
+}
+
+.l-main__item.logo {
+  position: relative;
+}
+.c-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  width: 400px;
+  height: 200px;
+}
+
+.c-logo > a > img {
+  filter:  brightness(0) invert(1);
 }

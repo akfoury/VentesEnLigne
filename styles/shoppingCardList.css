@@ -1,0 +1,140 @@
+@import "./theme-variables.css";
+
+.l-main {
+    margin-top: 0!important;
+}
+
+#shopping {
+    flex: 1 1 70%;
+}
+
+#command {
+    flex: 1 1 30%;
+}
+
+.shopping-card-list__command {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px 32px;
+    margin: 32px 0;
+    margin-left: 64px;
+    background-color: #141313;
+    color: white;
+    width: 80%;
+    height: 100px;
+    margin-top: 110px;
+}
+
+.shopping-card-list__command {
+    width: 80%;
+}
+
+.shopping-card-list__command > p > span {
+    font-weight: 700;
+}
+
+.shopping-card-list__command button {
+    width: 80%;
+}
+
+.shopping-card-list {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    margin: 32px 0;
+    margin-left: 64px;
+    background-color: #141313;
+    color: white;
+    width: 100%;
+}
+
+.shopping-card-list__row {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping-card-list__img {
+    margin: 16px 32px;
+    flex: 1 1 30%;
+}
+
+.shopping-card-list__content {
+    margin: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    flex: 1 1 60%;
+}
+
+.shopping-card-list__label {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.shopping-card-list__item > input {
+    width: 40px;
+}
+
+.shopping-card-list__available {
+    color: var(--light-green);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.shopping-card-list__checkbox {
+    display: flex;
+    align-items: center;
+    flex: 1 1 5%;
+}
+
+.shopping-card-list__price {
+    flex: 1 1 5%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.shopping-card-list__price--currency {
+    font-size: 0.90rem;
+    padding-top: 1px;
+    padding-left: 4px;
+}
+
+.shopping-card-list__headers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    margin-left: 64px;
+}
+
+.shopping-card-list__headers > .shopping-card-list__title {
+    padding: 16px 0px;
+    padding-left: 20px;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.shopping-card-list__headers > .shopping-card-list__title_price {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: white;
+    background-color: white;
+    width: 100%;
+    margin-left: 80px;
+}

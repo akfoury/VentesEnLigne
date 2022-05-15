@@ -1,0 +1,31 @@
+@import "./theme-variables.css";
+
+body {
+    background-color: var(--darker-grey);
+}
+
+.confirmation-payment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: var(--light-grey);
+}
+
+.confirmation-payment__icon {
+    text-align: center;
+    padding-top: 10%;
+}
+
+.fa-circle {
+    color: var(--light-green);
+}
+
+
+.confirmation-payment__message {
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+}
